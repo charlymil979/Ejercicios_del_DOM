@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM exercises</title>
+   <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body data-dark>
+   <header class="fixed-header">
+      <h1>Ejercicios del DOM</h1>
+   </header>
+   <button class="burger-menu-button">
+      <div class="line line1"></div>
+      <div class="line line0"></div>
+      <div class="line line1"></div>
+      <div class="cross"></div>
+   </button>
+   <button id="init-button" class="init-button hidden">&#11014
+   </button>
+   <aside class="burger-menu">
+      <nav class="menu">
+         <a href="#section1">Reloj Digital y Alarma Sonora</a>
+         <a href="#section2">Eventos del Teclado</a>
+         <a href="#section3">CountDown</a>
+         <a href="#section4">Sección 4</a>
+         <a href="#section5">Sección 5</a>
+      </nav>
+   </aside>
+
+   <main>
+      <section id="section1" class="section">
+         <h2>Reloj Digital y Alarma Sonora</h2>
+         <div class="clock-content">
+            <span data-dark class="hour"></span>
+            <span data-dark class="minutes"></span>
+            <span data-dark class="seconds"></span>
+         </div>
+         <div class="contains">
+            <div class="buttons"> <button class="clock-init">Start Clock</button>
+               <button class="clock-stop">Stop Clock</button>
+            </div>
+            <div class="buttons">
+               <button class="alarm-init">Start Alarm</button>
+               <button class="alarm-stop">Stop Alarm</button>
+            </div>
+         </div>
+      </section>
+      <section id="section2" class="section">
+         <h2>Eventos del Teclado</h2>
+         <span>Presiona: <br>
+            Alt+a <br>
+            Alt+c <br>
+            Alt+p <br>
+            Para ver más acciones de esta sección</span>
+         <article class="stage">
+            <div class="ball"></div>
+         </article>
+         Mueve el cursor para controlar el balón
+      </section>
+      <section id="section3" class="section">
+         <h2>CountDown</h2>
+         <h3 class="count-down"></h3>
+
+      </section>
+      <section id="section4" class="section">
+         <h2>Sección 4</h2>
+      </section>
+      <section id="section5" class="section">
+         <h2>Sección 5</h2>
+      </section>
+   </main>
+   <button data-dark class="dark-mode">🌒</button>
+   <div class="change-colors">
+      <div class="change-colors-screen">Cambia el color principal
+         <button class="ok">🗸</button>
+         <button class="reset">❌</button>
+      </div>
+      <div class="color">
+         <button class="r-less">-</button>
+         <span class="c-c-red">
+            <button class="r-selector"></button>Rojo</span>
+         <button class="r-more">+</button>
+         <span class="value">240</span>
+      </div>
+      <div class="color">
+         <button class="g-less">-</button>
+         <span class="c-c-green">
+            <button class="g-selector"></button>Verde</span>
+         <button class="g-more">+</button>
+         <span class="value">220</span>
+
+
+      </div>
+      <div class="color">
+         <button class="b-less">-</button>
+         <span class="c-c-blue">
+            <button class="b-selector"></button>Azul</span>
+         <button class="b-more">+</button>
+         <span class="value">78</span>
+      </div>
+   </div>
+   <div class="colors-button">🌈</div>
+</body>
+<script src="./html.js" type="module"></script>
+
+</html>

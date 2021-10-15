@@ -1,0 +1,481 @@
+/* Reseteando CSS */
+/* Generando variables */
+:root{
+--main-font: sans-serif;
+--font-size:16px;
+--main-color: #4ff07f;
+/* --main-color: #F0DB4F; */
+--second-color: #222;
+--main-modal-color:rgba(247,222,30,0.85);
+--second-modal-color:rgba(34,34,34,0.85);
+--containet-width: 1200px;
+--text-color:#333;
+--background-color: rgb(216, 216, 216);
+--clock-color:rgb(216, 216, 216);
+--x-color:var(--second-color);
+
+}
+
+/* Dando valores iniciales a todo el HTML */
+html{
+   box-sizing: border-box;
+   font-family: var(--main-font);
+   font-size: var(--font-size);
+   scroll-behavior: smooth;
+   color: var(--text-color);
+   background-color: var(--background-color);
+}
+
+*,
+*::before,
+*::after{
+   box-sizing: inherit;
+}
+
+/* Reseteando el body */
+body{
+   margin: 0;
+   overflow-x: hidden;
+}
+
+.dark{
+   color: var(--main-color);
+   background-color: var(--text-color);
+   transition: all 0.4s ease-in-out;
+   --clock-color:var(--main-color);
+}
+
+
+/* Ajustando img a los contenedores */
+img{
+   max-width: 100%;
+   height: auto;
+}
+@font-face {
+font-family: 'Audiowide-Regular';
+src: url(../fonts/Audiowide-Regular.ttf);
+/* font-family: 'CloisterBlack';
+src: url(../fonts/CloisterBlack.ttf); */
+
+}
+
+.fixed-header{
+   position: sticky;
+   top: 0;
+   padding: 1rem;
+   background-color: var(--main-color);
+   color: var(--second-color);
+   margin: 0;
+   width: 100%;
+   margin: 0;
+}
+
+.fixed-header h1{
+   margin: 0 auto;
+   text-align: center;
+}
+
+.burger-menu{
+   position: fixed;
+   z-index: 98;
+   top:0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--second-modal-color);
+   /* original use height: 100%; */
+   padding-top: 3rem;
+   display: block;
+   /* translate(x,y) -100% X 0% Y se mueve todo a la izq*/
+   transform: translate(-100%,-100%);
+   opacity: 0;
+   /*visibility: hidden;     activar con visibility de .is-active*/ 
+   transition: transform 0.3s ease,opacity 0.6s ease;
+}
+
+.menu{
+   width: inherit;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+}
+
+.menu a{
+   padding: 2rem;
+   width: inherit;
+   display: block;
+   font-size: 1.5rem;
+   text-decoration: none;
+   color: var(--main-color);
+   transition: all 0.3s ease;
+}
+
+.menu a:hover{
+   font-weight: bold;
+   color: var(--second-color);
+   background-color: var(--main-color);
+}
+
+.burger-menu-button{
+   display: flex;
+   flex-direction: column;    /*no figura*/
+   justify-content: center;
+   align-items: center;
+   position:fixed;
+   z-index: 99;
+   bottom: 1vh;       /*  original use 3px  */
+   right: 1vw;
+   width: 4rem;      /*original use 3rem*/
+   height: 4rem;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   border: 4px solid lightgrey;    /*no figura*/
+   transition: all 0.1s ease;
+   cursor: pointer;
+}
+
+.burger-menu-button:hover{ 
+   color: var(--main-color);
+   background-color: var(--second-color);
+   border-color: rgb(114, 114, 114);
+   --x-color:var(--main-color)
+   
+}
+
+.line{
+   position: relative;
+   width: 2.5rem;
+   border-top: var(--x-color) solid 3px;
+   border-bottom:var(--x-color) solid 3px;
+   border-left: var(--x-color) solid 1px;
+   border-right: var(--x-color) solid 1px;
+   border-radius: 30%;
+   margin: 2px 0;
+}
+
+.line0{
+   transition: all 0.1s ease;
+}
+
+.cross{
+   position: fixed;
+   /* margin-bottom: 0.8rem; */
+   height: 2.5rem;
+   border-top: var(--x-color) solid 1px;
+   border-bottom: var(--x-color) solid 1px;
+   border-left:var(--x-color) solid 3px;
+   border-right:var(--x-color) solid 3px;
+   border-radius: 30%;
+   visibility: hidden;
+   transition: all 0.1s ease;
+}
+
+.rotated{
+   transform: rotate(45deg);
+   }
+
+
+
+
+/* Desde aqui es distinto al ejercicio xq no use library */
+
+
+.burger-menu-button div:hover{
+border-color: var(--main-color);
+}
+
+/* Hasta aqui es distinto al ejercicio xq no use library */
+
+
+.section{
+   padding: 2rem;
+   padding-top: 5rem;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   max-width: var(--containet-width);
+   min-height: 100vh;
+   text-align: center;
+}
+
+/* Dando formato al reloj y alarma */
+.clock-content{
+   font-family: 'Audiowide-Regular';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 6rem;
+   
+}
+.clock-content span{
+   text-align: center;
+   display:inline;
+   font-size: 40px;
+   width: 80px;
+   height: 80px;
+   padding-top: 12px;
+   border: transparent solid 3px;
+   margin-left: 10px;
+   margin-right: 10px;
+   border-radius: 50%;
+}
+.clock-content .on{
+   background-color: var(--text-color);
+   color: var(--clock-color);   
+   border-color: var(--clock-color);
+}
+
+.contains{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+.buttons button{
+   font-weight: bolder;
+   width: 60px;
+   height: 60px;
+   border:rgb(149, 149, 149) solid 4px;
+   border-radius: 50%;
+   margin-bottom: 20px;
+}
+
+.buttons button:hover{
+   border-color: darkslategray;
+   opacity: 75%;
+}
+.buttons :nth-child(even){
+   background-color: rgb(206, 0, 0);
+   border-bottom-left-radius: 0;
+   border-top-left-radius: 0;
+   margin-right: 50px;
+   margin-left: 10px;
+}
+
+.buttons :nth-child(odd){
+   background-color: rgb(0, 190, 0);
+   border-bottom-right-radius: 0;
+   border-top-right-radius: 0;
+   margin-left: 50px;
+   margin-right: 10px;
+}
+
+/* ********Eventos del Teclado******** */
+.stage{
+   display: flex;
+   min-height: 50vh;
+   background-color: var(--second-color);
+   border-radius: 5px;
+}
+
+.ball{
+   margin: auto;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   background-color: var(--main-color);
+}
+/* ******CountDown****** */
+.saludo{
+   font-size: 60px;
+   color: red;
+   background-color: darkgreen;
+}
+
+/* ******Init-Button****** */
+.init-button{
+   position:fixed;
+   z-index: 99;
+   bottom: 1vh;
+   right: calc(4.5rem + 1vw);
+   width: 4rem; 
+   height: 4rem;
+   border-radius: 50%;
+   font-size: 2.5rem;
+   background-color: var(--main-color);
+   border: 4px solid lightgrey;
+   cursor: pointer;
+   transition: all 0.2s linear;
+}
+.init-button:hover{
+   transition: all 0.3s ease-in-out;
+   color: var(--main-color);
+      background-color: var(--second-color);
+   border-color: rgb(114, 114, 114);
+}
+
+
+.dark-mode{
+   position:fixed;
+   z-index: 99;
+   bottom: 1vh;
+   left: 1vh;
+   width: 4rem; 
+   height: 4rem;
+   font-size: 2rem;
+   text-align: center;
+   padding-bottom: 1vh;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   border: 4px solid lightgrey;
+   transition: all 0.2s linear;
+   cursor: pointer;
+   
+}
+
+.dark-mode:hover{
+   transition: all 0.3s ease-in-out;
+   color: var(--main-color);
+   background-color: var(--second-color);
+   border-color: rgb(114, 114, 114);
+}
+
+.change-colors{
+   z-index: 98;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   align-items: center;
+   height: 40vw;
+   width: 40vw;
+   bottom: calc(4.25rem + 1vh);
+   left: calc(4.25rem + 1vh);
+   transform: translate(calc(-100% - 4.25rem - 1vh),0);
+   transition: all 0.4s ease-in-out;
+}
+
+.change-colors .change-colors-screen{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-size: 2rem;
+   color: var(--text-color);
+   width: 100%;
+   height: 70%;
+   background-color: lightslategray;
+   border-radius: 10px;
+   justify-content: center;
+   align-items: center;
+}
+
+.change-colors-screen button{
+   margin-bottom: 1.5rem;
+   border-radius: 40%;
+   font-weight: bold;
+   width: auto;
+}
+.color{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   font-size: 100%;
+   height: 1.8rem;
+   width: 100%;
+   margin: 2px;
+   
+}
+
+.color span{
+   width: 50%;
+   line-height: 2rem;
+   text-align: center;
+}
+
+
+.color button{
+   height: 1.8rem;
+   width: 1.8rem;
+   background-color: darkslategray;
+   color: lightgray;
+   text-align: center;
+   line-height:1vw;
+   margin-right: 5px;
+   margin-left: 5px;
+   cursor:pointer;
+   border-radius: 50%;
+}
+
+.color .value{
+   background-color: lemonchiffon;
+   color: var(--second-color);
+   font-weight: bold;
+   width: 6vw;
+   border-radius: 5px;
+}
+
+.colors-button{   
+   position:fixed;
+   z-index: 99;
+   bottom: 1vh;
+   left: calc(4.25rem + 1vh);
+   width: 4rem; 
+   height: 4rem;
+   font-size: 2rem;
+   text-align: center;
+   padding-top: 0.2rem;
+   border-radius: 50%;
+   background-color: var(--main-color);
+   border: 4px solid lightgrey;
+   cursor: pointer;
+}
+
+.colors-button:hover{
+   transition: all 0.3s ease-in-out;
+   color: var(--main-color);
+   background-color: var(--second-color);
+   border-color: rgb(114, 114, 114);
+}
+
+.c-c-red{
+   padding-right: 35%;
+   background-color: red;
+   color: blanchedalmond;
+}
+
+.c-c-green{
+   padding-right: 20%;
+   background-color: green;
+   color: blanchedalmond;
+}
+
+.c-c-blue{
+   padding-right: 5%;
+   background-color: blue;
+   color: blanchedalmond;
+}
+
+.color span{
+   display: flex;
+   justify-content: space-between;
+}
+
+.color span button{
+   margin-left: 0;
+   border-radius: 0;
+   padding: 1.5px;
+   width: 0;
+   border-left:inherit solid 1px ;
+   border-right:inherit solid 1px ;
+}
+
+.is-active{
+   transform: translate(0,0);  
+   /* visibility: visible;   activar junto con visibility: hidden; de burger-menu */
+   opacity: 1;
+}
+
+.active{
+   z-index: 98;
+   visibility: visible;
+}
+
+.inactive{
+   visibility: hidden;
+}
+.hidden{
+   opacity: 0;
+   visibility: hidden;
+}
