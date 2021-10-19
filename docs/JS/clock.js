@@ -15,6 +15,7 @@ export default function clock(clock_start, clock_stop, alarm_start, alarm_stop, 
          $hour.classList.add('on');
          $minutes.classList.add('on');
          $seconds.classList.add('on');
+         
          show_clock= setInterval(() => {
          fecha=new Date();
          $hour.textContent=fecha.getHours().toLocaleString();
