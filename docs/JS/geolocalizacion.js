@@ -11,7 +11,7 @@ const d = document,
       success=position=>{
       let g=position.coords,
       ubic=`https://www.google.com.ar/maps/@${g.latitude},${g.longitude},15z`//15z es el zoom del maps (de 1z a 20z)
-      console.log(position);
+      // console.log(position);
       $div.innerHTML = `<br><ul>Tu posición actual es: <br>
             <li>Latitud: <b>${g.latitude}</b></li>
             <li>Longitud: <b>${g.longitude}</b></li>

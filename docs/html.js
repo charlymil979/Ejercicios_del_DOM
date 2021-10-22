@@ -12,6 +12,8 @@ import estadoConexion from "./JS/conectividad.js";
 import webCam from "./JS/web_cam.js";
 import getGeolocation from "./JS/geolocalizacion.js";
 import filtro from "./JS/filtro_busqueda.js";
+import sorteo from "./JS/sorteo_digital.js";
+import responsiveSlider from "./JS/responsive-slider.js";
 
 const d= document;
 
@@ -48,6 +50,9 @@ d.addEventListener("DOMContentLoaded",(e)=>{
    userDeviceInfo("user-device");
    webCam('webcam');
    getGeolocation("geolocation");
+   filtro("filter", ".filtro figure");
+   sorteo(".players", "#sorteo-btn");
+   responsiveSlider()
 })
 
 // keyup se ejecuta al soltar la tecla
@@ -63,7 +68,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
    d.addEventListener("keydown",(e)=>{
       shortcuts(e);
       moveBall(e, ".ball", ".stage");
-      filtro("filter", ".filtro figure");
+      
    });
    
       estadoConexion();

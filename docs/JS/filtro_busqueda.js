@@ -1,16 +1,29 @@
 const d=document;
 
-export default function filtro(id,container) {
-const $filtro=d.getElementById(id),
+export default function filtro(filtro,container) {
+const $filtro=d.getElementById(filtro),
    $container=d.querySelectorAll(container);
+
+   /* keyup no puede manejar la 'x' del boton, por eso se usa input */
+   d.addEventListener('input',(e) => {
+      console.log(e.target)
+      let compare = $filtro.value.toLowerCase();
+      if(e.key==="Escape") compare="";
+      
+         $container.forEach((el) => el.textContent.toLowerCase().includes(compare)
+            ?el.classList.remove("oculta")
+            :el.classList.add("oculta")
+         )
+   })
    
-   setTimeout(() =>{
+  /* Esto seria en el keyDown del HTML.js
+  
+  setTimeout(() =>{
+
       let compare=$filtro.value,
       expReg=new RegExp(compare,'i');
-      // console.log(compare);
       
        $container.forEach(el=>{
-         console.log(expReg.test(el.textContent));
          if (!expReg.test(el.textContent)) {
             el.classList.add("oculta");
          }
@@ -21,5 +34,5 @@ const $filtro=d.getElementById(id),
       console.log(el.classList)
       
    })
-   }, 1);
+   }, 1); */
 }

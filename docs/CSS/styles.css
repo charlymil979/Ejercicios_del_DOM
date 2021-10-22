@@ -8,7 +8,7 @@
 --second-color: #222;
 --main-modal-color:rgba(247,222,30,0.85);
 --second-modal-color:rgba(34,34,34,0.85);
---containet-width: 1200px;
+--container-width: 1200px;
 --text-color:#333;
 --background-color: rgb(216, 216, 216);
 --clock-color:rgb(216, 216, 216);
@@ -51,16 +51,19 @@ img{
    max-width: 100%;
    height: auto;
 }
+
+/* fuente paa el reloj */
 @font-face {
 font-family: 'Audiowide-Regular';
 src: url(../fonts/Audiowide-Regular.ttf);
 /* font-family: 'CloisterBlack';
 src: url(../fonts/CloisterBlack.ttf); */
-
 }
 
+/* cabecera */
 .fixed-header{
    position: sticky;
+   z-index: 900;
    top: 0;
    padding: 1rem;
    background-color: var(--main-color);
@@ -75,6 +78,7 @@ src: url(../fonts/CloisterBlack.ttf); */
    text-align: center;
 }
 
+/* ******* menu aside******* */
 .burger-menu{
    position: fixed;
    z-index: 98;
@@ -120,6 +124,7 @@ src: url(../fonts/CloisterBlack.ttf); */
    background-color: var(--main-color);
 }
 
+/* boton menu */
 .burger-menu-button{
    display: flex;
    flex-direction: column;    /*no figura*/
@@ -190,19 +195,19 @@ border-color: var(--main-color);
 
 /* Hasta aqui es distinto al ejercicio xq no use library */
 
-
+/* Secciones del HTML */
 .section{
    padding: 2rem;
    padding-top: 5rem;
    margin-left: auto;
    margin-right: auto;
    width: 100%;
-   max-width: var(--containet-width);
+   max-width: var(--container-width);
    min-height: 100vh;
    text-align: center;
 }
 
-/* Dando formato al reloj y alarma */
+      /* Dando formato al reloj y alarma */
 .clock-content{
    font-family: 'Audiowide-Regular';
    display: flex;
@@ -263,7 +268,7 @@ border-color: var(--main-color);
    margin-right: 10px;
 }
 
-/* ********Eventos del Teclado******** */
+      /* ********Eventos del Teclado******** */
 .stage{
    display: flex;
    min-height: 50vh;
@@ -278,14 +283,14 @@ border-color: var(--main-color);
    border-radius: 50%;
    background-color: var(--main-color);
 }
-/* ******CountDown****** */
+         /* ******CountDown****** */
 .saludo{
    font-size: 60px;
    color: red;
    background-color: darkgreen;
 }
 
-/* ******Init-Button****** */
+      /* ******Scroll-Init-Button****** */
 .init-button{
    position:fixed;
    z-index: 99;
@@ -307,7 +312,7 @@ border-color: var(--main-color);
    border-color: rgb(114, 114, 114);
 }
 
-
+               /*  Dark mode */
 .dark-mode{
    position:fixed;
    z-index: 99;
@@ -333,6 +338,7 @@ border-color: var(--main-color);
    border-color: rgb(114, 114, 114);
 }
 
+      /* Boton cambio color ppal */
 .change-colors{
    z-index: 98;
    position: fixed;
@@ -363,6 +369,7 @@ border-color: var(--main-color);
    align-items: center;
 }
 
+         /* Boton cambio de color */
 .change-colors-screen button{
    margin-bottom: 1rem;
    border-radius: 40%;
@@ -465,35 +472,30 @@ border-color: var(--main-color);
    border-right:inherit solid 1px ;
 }
 
-.responsive{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.responsive *{
-   width: 20%;
-}
-
-.user-agent li{
-   width: 100%;
-}
+/* Filtros de busqueda */
 
 .filtro{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
    }
 
- 
+   .filtro figure{
+      max-width: 300px;
+      background-color: var(--second-color);
+      color: var(--main-color);
+      transition: all 0.3s ease-out;
+   }
 
+   figure img{
+      width: 100%;
+      height: auto;
+   }
 
+   figure figcaption{
+      padding: 1rem;
+   }
 
-
-.is-active{
-   transform: translate(0,0);  
-   /* visibility: visible;   activar junto con visibility: hidden; de burger-menu */
-   opacity: 1;
-}
+ /* Deteccion de conexion */
 
 .online,
 .offline{
@@ -512,6 +514,138 @@ border-color: var(--main-color);
    background-color: #b71c1c;
 }
 
+/* ******** Responsive Slider ******** */
+
+.slider{
+   position: relative;
+   width: 70vw;
+   margin: 1rem auto;
+   text-align: center;
+   /* max-width: 600px;
+   min-width: 400px; */
+   /* height: auto; */
+   /* display: flex; */
+   /* flex-wrap: nowrap; */
+   overflow: hidden;
+   
+}
+.slider-slides{
+   position: relative;
+   width: 100%;
+   height: 400px;
+   /* max-width: 600px;
+   min-width: 400px; */
+   /* display: flex;
+   flex-wrap: nowrap;
+   margin: 1rem auto;
+   overflow: hidden; */
+   
+}
+
+.slider-slide{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 1s ease;
+}
+
+.slider-slide.slide-active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.slider-slide img{
+   height: inherit;
+   width: inherit;
+   object-fit: cover;  /*adapta la img al ancho del contenedor */
+   object-position: 50% 0%;
+}
+
+.slider-btns{
+   position: absolute;
+   width: 100%;
+   top: calc(50% - 1.5rem);
+   display: flex;
+   justify-content: space-between;
+
+}
+
+
+.slider-btns a{
+   /* display: block; */
+   text-decoration: none;
+   background-color: var(--main-color);
+   color: var(--text-color);
+   height: 3rem;
+   width: 3rem;
+   border-radius: 50%;
+   font-size: 2rem;
+   font-family: 'Audiowide-Regular';
+   font-weight: bolder;
+   opacity: 0.6;
+   cursor: pointer;
+   transition: all 0.4s ease;
+}
+
+.slider a:hover{
+   opacity: 1;
+   border: var(--second-color) solid thin;
+}
+
+#prev{
+   left: 0;
+}
+
+.slider-points{
+   position: absolute;
+   bottom: 2px;
+   width: 60%;
+   height: 1.5rem;
+   margin-left: 20%;
+   display: flex;
+   justify-content: space-around;
+   border-radius: 0.6rem;
+   opacity: 0.6;
+   align-items: center;
+   background-color: var(--second-color);
+   
+}
+
+.toque{
+   right: 82%;
+   color: whitesmoke;
+   padding: 0 2px;
+   width: 10%;
+   min-width: 40px;
+   text-align: right;
+}
+
+.slider-points *{
+   opacity: 1;
+   height: 0.7rem;
+   width: 0.7rem;
+   background-color: var(--main-color);
+   border-radius: 50%;
+   cursor: pointer;
+   transition: all 0.4s ease;
+}
+
+.slider-point-active{
+   background-color: whitesmoke;
+}
+
+
+/* Para alternar vistas */
+.is-active{
+   transform: translate(0,0);  
+   /* visibility: visible;   activar junto con visibility: hidden; de burger-menu */
+   opacity: 1;
+}
+
 .active{
    z-index: 98;
    visibility: visible;
@@ -520,12 +654,14 @@ border-color: var(--main-color);
 .inactive{
    visibility: hidden;
 }
+
 .hidden{
    opacity: 0;
    visibility: hidden;
 }
 
 .oculta{
-   position: fixed;
    visibility: hidden;
+   opacity: 0;
+   order: 1;
 }
