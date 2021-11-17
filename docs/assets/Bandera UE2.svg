@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="270"
+   height="180"
+   viewBox="0 0 270 180"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="Bandera UE2.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview829"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:snap-global="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="2.9174703"
+     inkscape:cx="113.9686"
+     inkscape:cy="93.060075"
+     inkscape:window-width="1366"
+     inkscape:window-height="745"
+     inkscape:window-x="-8"
+     inkscape:window-y="760"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     inkscape:snap-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid888"
+       spacingx="10"
+       spacingy="10" />
+    <sodipodi:guide
+       position="135,100"
+       orientation="-1,0"
+       id="guide890"
+       inkscape:label=""
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="160,90"
+       orientation="0,1"
+       id="guide964"
+       inkscape:label=""
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs824" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="fondo"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="giro"
+     style="display:inline">
+    <path
+       style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:#003399;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="path914"
+       sodipodi:type="arc"
+       sodipodi:cx="135"
+       sodipodi:cy="90"
+       sodipodi:rx="75"
+       sodipodi:ry="75"
+       sodipodi:start="0"
+       sodipodi:end="6.1399461"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 210,90 A 75,75 0 0 1 137.68516,164.95192 75,75 0 0 1 60.192269,95.366879 75,75 0 0 1 126.95828,15.432374 75,75 0 0 1 209.23191,79.293758" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="1"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2969"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2971"
+       transform="translate(60)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+    <!-- *******************  1  ******************** -->
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 165 38"
+       to="-360 165 38"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="2"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path1010"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2362"
+       transform="translate(104,-60)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 187 60"
+       to="-360 187 60"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+    <!-- *******************  2  ******************** -->
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="3"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2048"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2050"
+       transform="translate(120)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 195 90"
+       to="-360 195 90"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="4"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2362"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2364"
+       transform="translate(0,60)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+        <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 187 120"
+       to="-360 187 120"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="5"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2971"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2973"
+       transform="translate(0,104)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+    <!-- *******************  5  ******************** -->
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0  165 142"
+       to="-360 165 142"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="6"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2050"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2052"
+       transform="translate(-60,60)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+    <!-- *************** 6 ************ -->
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0  135 150"
+       to="-360 135 150"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="7"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2364"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2967"
+       transform="translate(-82,22)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0  105 142"
+       to="-360 105 142"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer10"
+     inkscape:label="8"
+     style="display:inline">
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#ffcc00;fill-opacity:1;fill-rule:evenodd"
+       id="path1010"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="83"
+       sodipodi:cy="120"
+       sodipodi:r1="10"
+       sodipodi:r2="3.8199999"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 83,110 2.24534,6.90956 7.265225,2.7e-4 -5.877529,4.27061 2.244816,6.90973 L 83,123.82 l -5.877853,4.27017 2.244817,-6.90973 -5.877529,-4.27061 7.265225,-2.7e-4 z"
+       inkscape:transform-center-y="-0.95491503" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 83 120"
+       to="-360 83 120"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer11"
+     inkscape:label="9"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path1010"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2048"
+       transform="translate(-8,-30)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 75 90"
+       to="-360 75 90"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer12"
+     inkscape:label="10"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path1010"
+       inkscape:transform-center-y="-0.95491503"
+       id="use3155"
+       transform="translate(0,-60)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 83 60"
+       to="-360 83 60"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer13"
+     inkscape:label="11"
+     style="display:inline">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use2967"
+       inkscape:transform-center-y="-0.95491503"
+       id="use2969"
+       transform="translate(0,-104)"
+       width="100%"
+       height="100%"
+       style="display:inline" />
+       <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0 105 39"
+       to="-360 105 39"
+       dur="15s"
+       repeatCount="indefinite" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="12"
+     style="display:inline">
+    <!-- ***********  12  ************** -->
+    <animateTransform
+       attributeName="transform"
+       type="rotate"
+       from="0  135 30"
+       to="-360 135 30"
+       dur="15s"
+       repeatCount="indefinite" />
+    <path
+       id="rect1132"
+       style="color:#000000;display:inline;fill:#ffcc00;fill-opacity:1;fill-rule:evenodd;stroke-width:2.76941;-inkscape-stroke:none"
+       d="m 135,20 -2.24609,6.910156 h -7.26368 l 5.87696,4.269532 -2.24414,6.910156 5.87695,-4.269532 5.87695,4.269532 -2.24414,-6.910156 5.87696,-4.269532 h -7.26368 z m -0.98438,3.833984 v 0.0098 h -0.004 a 1.21875,2.03125 0 0 1 0.004,-0.0098 z" />
+  </g>
+  <animateTransform
+     attributeName="transform"
+     type="rotate"
+     from="0  0 0"
+     to="360 0 0"
+     dur="15s"
+     repeatCount="indefinite" />
+</svg>

@@ -6,7 +6,6 @@ const $filtro=d.getElementById(filtro),
 
    /* keyup no puede manejar la 'x' del boton, por eso se usa input */
    d.addEventListener('input',(e) => {
-      console.log(e.target)
       let compare = $filtro.value.toLowerCase();
       if(e.key==="Escape") compare="";
       

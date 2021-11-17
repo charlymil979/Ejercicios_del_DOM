@@ -38,6 +38,10 @@ body{
    overflow-x: hidden;
 }
 
+/* .menu-right{ Para usar con scroll_spy.js
+   margin-right: 25%;
+} */
+
 .dark{
    color: var(--main-color);
    background-color: var(--text-color);
@@ -48,6 +52,12 @@ body{
 
 /* Ajustando img a los contenedores */
 img{
+   max-width: 100%;
+   height: auto;
+}
+
+video{
+   width: 70%;
    max-width: 100%;
    height: auto;
 }
@@ -99,8 +109,17 @@ src: url(../fonts/CloisterBlack.ttf); */
    transition: transform 0.3s ease,opacity 0.6s ease;
 }
 
+/* .b-m-right{     para usar con scroll-spy.js
+   left: 75%;
+   width: 25%;
+   opacity: 1;
+   font-size: 1rem;
+   transform: translate(0,0);
+   transition: transform 0.3s ease,opacity 0.6s ease;
+} */
+
 .menu{
-   width: inherit;
+   width: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -118,10 +137,17 @@ src: url(../fonts/CloisterBlack.ttf); */
    transition: all 0.3s ease;
 }
 
+/* .b-m-right a{     para usar con scroll-spy.js
+   padding: 1rem;
+   font-size: 1rem;
+   width: 100%;
+} */
+
 .menu a:hover{
    font-weight: bold;
    color: var(--second-color);
    background-color: var(--main-color);
+   opacity: 0.7;
 }
 
 /* boton menu */
@@ -394,7 +420,6 @@ border-color: var(--main-color);
    text-align: center;
 }
 
-
 .color button{
    height: 1.8rem;
    width: 1.8rem;
@@ -638,8 +663,202 @@ border-color: var(--main-color);
    background-color: whitesmoke;
 }
 
+/* ******* Scroll Spy *********
+   va a trabajar con GRID        */
+@media screen and (min-width: 1024px){
+body{
+   display: grid;
+   /* cada valor es una columna */
+   grid-template-columns: 80% 20%;
+   /* idem filas, la 1ra es el header */
+   grid-template-rows: 4rem auto;
+   grid-template-areas:
+   "header  header"
+   "main    panel";
+   /* define el cont de cada celda */
+}
+main{
+   grid-area: main;
+}
+.fixed-header{
+   grid-area: header;
+}
+.burger-menu{
+   grid-area: panel;
+   align-self: start;
+   position: sticky;
+   top: 1rem;
+   justify-content: flex-start;
+   background-color: var(--second-color);
+   opacity: 1;
+   transform: translate(0,0);
+}
+
+.burger-menu-button{
+   display: none;
+}
+
+.menu{
+justify-content: start;
+text-align: right;
+}
+
+.menu a{
+   padding: 0.75rem;
+   font-size: 1rem;
+}
+
+.menu a:hover,
+.menu a.active{
+   color: var(--second-color);
+   background-color: var(--main-color);
+   /* opacity: 1; */
+}
+
+.init-button{
+   margin-right:calc(20% - 4.25rem);
+}
+
+}
+
+/* *****Video Inteligente***** */
+.smart-video{
+   margin-top: 1rem;
+   margin-bottom: 40vh;
+}
+
+/****** Formulario ***** */
+.comment-form{
+   --form-ok-color:#4caf50;
+   --form-error-color:#f44836;
+display: flex;
+flex-direction: column;
+width: 70%;
+margin: 0 auto;
+align-items: center;
+}
+
+.comment-form *{
+   display: block;
+   margin-top: 1rem;
+   padding: 0.5rem;
+}
+
+
+.comment-form input[name="name"]{
+   width: 64%;
+}
+.comment-form input[name="mail"]{
+   width: 76%;
+}
+.comment-form input[name="subject"]{
+   width: 88%;
+}
+
+.comment-form textarea{
+   width: 100%;
+   /* evita que se pueda manipular el text area con el mouse */
+   resize: none;
+}
+
+.comment-form legend,
+.comment-form-response{
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-align: center;
+}
+
+.comment-form input,
+.comment-form textarea{
+   font-size: 1rem;
+   font-family: sans-serif;
+}
+
+
+.comment-form input[type = submit] {
+   width: 50%;
+   font-weight: bold;
+   cursor: pointer;
+   /* margin-left: 38%; */
+}
+
+.comment-form *::placeholder{
+   /* formato a todos los placeholder */
+   color: #000;
+}
+
+/* formato de contenido valido o invalido */
+.comment-form [required]:valid {
+   border: thin solid var(--form-ok-color);
+}
+
+.comment-form [required]:invalid {
+   border: thin solid var(--form-error-color);
+}
+
+.comment-form-error{
+   margin-top: 0;
+   font-size: 80%;
+   background-color: var(--form-error-color);
+   color: #fff;
+   transition: all 800ms ease;
+}
+
+.comment-form-error.is-active{
+   display: block;
+   /* animation:
+   show-message=var name 1s=duration 1=cant ejec
+   normal=forma ejec 0s=delay ease-out=efecto animacion
+   both=conserva estilo final de animacion*/
+   animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+/* animacion de cuadros de error */
+@keyframes show-message {
+   0%{
+      visibility: hidden;
+      opacity: 0;
+   }
+   100%{
+      visibility: visible;
+      opacity: 1;
+   }
+   
+}
+
+.comment-form-loader{
+   padding: 0;
+   /* margin-left: calc(63% - 2rem); */
+   align-items: center;
+   width: 4rem;
+}
+/* ***** movimiento del loader ***** */
+@keyframes rotation {
+    from {transform: rotate(0deg);} to {transform: rotate(359deg);} }
+
+
+.comment-form-loader img{
+   margin: 0;
+   animation: rotation 3s infinite linear;  
+}    /* Hasta aqui loader mov    */
+
+/* ******dehabilitado******* */
+
+/* ********** Narrador ******** */
+.narrador{
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+width: 50%;
+align-items: center;
+}
+
 
 /* Para alternar vistas */
+.none{
+   display: none;
+}
+
 .is-active{
    transform: translate(0,0);  
    /* visibility: visible;   activar junto con visibility: hidden; de burger-menu */

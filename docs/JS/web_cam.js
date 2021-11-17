@@ -25,7 +25,7 @@ export default function webCam(id){
                <mark>${err}:</mark>
              </p>`
            );
-          console.log(`!Sucedió el siguiente error!: ${err}`);
+         //  console.log(`!Sucedió el siguiente error!: ${err}`);
         });
       // video y audio se envian como objeto
       //Stream es lo que devuelve la promisse getUserMedia
